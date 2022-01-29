@@ -1,12 +1,12 @@
 {
-  "name": "@elricb/find-file-up",
+  "name": "@elricb/readdir-recursive",
   "version": "1.0.0",
-  "description": "Steps up directories until file is found.",
+  "description": "Read directory contents recursively.",
   "license": "MIT",
   "author": "elricb (github.com/elricb)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elricb/find-file-up.git"
+    "url": "git+https://github.com/elricb/readdir-recursive.git"
   },
   "source": "src/index.js",
   "main": "dist/main.js",
@@ -19,9 +19,9 @@
     "build": "parcel build"
   },
   "keywords": [
-    "directory",
-    "search",
-    "up"
+    "readdir",
+    "recursive",
+    "node"
   ],
   "devDependencies": {
     "parcel": "^2.2.1"
