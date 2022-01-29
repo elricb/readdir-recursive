@@ -23,6 +23,10 @@
     "recursive",
     "node"
   ],
+  "bugs": {
+    "url": "https://github.com/elricb/readdir-recursive/issues"
+  },
+  "homepage": "https://github.com/elricb/readdir-recursive#readme",
   "devDependencies": {
     "parcel": "^2.2.1"
   }
