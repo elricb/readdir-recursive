@@ -4,9 +4,6 @@ import {promises as fs} from "fs";
 /**
  * Read directory and all sub-directory contents asynchronously.
  *
- * @param directory - includes path and filename
- * @param dirent - [node fs.Dirent](https://nodejs.org/api/fs.html#class-fsdirent)
- *
  * ```javascript
  * import {readdirRecursive} from "@elricb/readdir-recursive";
  *
