@@ -52,5 +52,13 @@ console.log("Done.");
 
 ## Documentation
 
+### Release Notes
+
+View commit tag for release notes.
+
+* [release list](https://github.com/elricb/readdir-recursive/tags)
+
+### API
+
 See `./docs/index.html`.
 
