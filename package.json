@@ -30,7 +30,7 @@
     "node"
   ],
   "engines": {
-    "node": ">=12"
+    "node": ">=8"
   },
   "devDependencies": {
     "@elricb/prettier-config": "^0.0.1",
