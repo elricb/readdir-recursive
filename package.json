@@ -3,31 +3,41 @@
   "version": "1.0.3",
   "description": "Read directory contents recursively.",
   "license": "MIT",
-  "author": "elricb (github.com/elricb)",
+  "author": "elricb (https://github.com/elricb)",
+  "homepage": "https://github.com/elricb/readdir-recursive#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/elricb/readdir-recursive.git"
   },
-  "source": "src/index.js",
-  "main": "dist/main.js",
-  "module": "dist/module.js",
-  "engines": {
-    "node": ">= 12"
+  "bugs": {
+    "url": "https://github.com/elricb/readdir-recursive/issues"
   },
+  "source": "src/index.ts",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "type": "commonjs",
   "scripts": {
-    "watch": "parcel watch",
-    "build": "parcel build"
+    "lint": "xo",
+    "docs": "npx typedoc --entryPointStrategy expand --out ./docs ./src",
+    "build-cjs": "./node_modules/typescript/bin/tsc --project ./tsconfig.json --outDir ./lib/cjs --importHelpers",
+    "build-esm": "./node_modules/typescript/bin/tsc --project ./tsconfig-esm.json --outDir ./lib/esm --importHelpers",
+    "build": "rm -rf ./lib && npm run build-esm && npm run build-cjs",
+    "release": "npm run lint && npm run docs && npm run build"
   },
   "keywords": [
     "readdir",
     "recursive",
     "node"
   ],
-  "bugs": {
-    "url": "https://github.com/elricb/readdir-recursive/issues"
+  "engines": {
+    "node": ">=12"
   },
-  "homepage": "https://github.com/elricb/readdir-recursive#readme",
   "devDependencies": {
-    "parcel": "^2.2.1"
+    "@elricb/prettier-config": "^0.0.1",
+    "@elricb/xo-config": "^0.1.1",
+    "@types/node": "^18.7.19",
+    "typedoc": "^0.23.15",
+    "typescript": "^4.7.4",
+    "xo": "^0.52.3"
   }
 }
